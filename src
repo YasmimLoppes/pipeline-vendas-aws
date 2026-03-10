@@ -1,0 +1,31 @@
+import pandas as pd
+import boto3
+import os
+from dotenv import load_dotenv
+
+# 1. Carregar as chaves de segurança (Amanhã você estuda o .env)
+load_dotenv()
+
+def rodar_pipeline():
+    try:
+        print("🚀 Iniciando o Pipeline de Vendas...")
+        
+        # --- EXTRAÇÃO ---
+        # Amanhã você vai criar um CSV de teste para ler aqui
+        # df = pd.read_csv('data/vendas_brutas.csv')
+        
+        # --- TRANSFORMAÇÃO ---
+        print("⚙️ Tratando os dados com Pandas...")
+        # Aqui entra a limpeza que vamos fazer amanhã
+        
+        # --- CARGA (AWS S3) ---
+        print("☁️ Enviando para a Nuvem (AWS)...")
+        # O boto3 é quem faz a mágica de mandar pro S3
+        
+        print("✅ Sucesso! Dados carregados na AWS.")
+
+    except Exception as e:
+        print(f"❌ Erro no pipeline: {e}")
+
+if __name__ == "__main__":
+    rodar_pipeline()
